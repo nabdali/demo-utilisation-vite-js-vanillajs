@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Texte html</title>
+  </head>
+  <body>
+    <button id="toggleButton">Afficher/Cachez le texte</button>
+    <div id="content" style="display: none">
+      <p>
+        Ce texte est caché par défaut et il peut être affiché lorsque vous
+        appuyez sur le bouton ci-dessus.
+      </p>
+    </div>
+    <script type="module">
+      import { toggleVisibility } from './toggleModule.js';
+
+      const button = document.getElementById('toggleButton');
+      const content = document.getElementById('content');
+
+      button.addEventListener('click', () => {
+        toggleVisibility(content);
+      });
+    </script>
+  </body>
+</html>
